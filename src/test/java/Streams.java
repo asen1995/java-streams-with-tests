@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class Streams {
 
@@ -20,5 +21,20 @@ public class Streams {
 
         Stream<String> stream = Arrays.asList("a", "b", "c").stream();
         assertNotNull(stream);
+
+        stream.forEach(e -> {
+            assertTrue(!e.isEmpty());
+        });
+    }
+
+    @DisplayName("streamValuesNotEmptyUsingLambdaForFunctionalInterfaceCustomer")
+    @Test
+    void streamValuesNotEmptyUsingLambdaForFunctionalInterfaceCustomer() {
+        Stream<String> stream = Arrays.asList("a", "b", "c").stream();
+
+        stream.forEach(e -> {
+            assertNotNull(e);
+            assertTrue(!e.isEmpty());
+        });
     }
 }
