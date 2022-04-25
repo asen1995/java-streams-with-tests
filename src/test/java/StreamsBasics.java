@@ -19,7 +19,7 @@ public class StreamsBasics {
     @Test
     void stream() {
 
-        Stream<String> stream = Arrays.asList("a", "b", "c").stream();
+        final Stream<String> stream = Arrays.asList("a", "b", "c").stream();
         assertNotNull(stream);
 
         stream.forEach(e -> {
@@ -30,7 +30,7 @@ public class StreamsBasics {
     @DisplayName("streamValuesNotEmptyUsingLambdaForFunctionalInterfaceCustomer")
     @Test
     void streamValuesNotEmptyUsingLambdaForFunctionalInterfaceCustomer() {
-        Stream<String> stream = Arrays.asList("a", "b", "c").stream();
+        final Stream<String> stream = Arrays.asList("a", "b", "c").stream();
 
         stream.forEach(e -> {
             assertNotNull(e);
