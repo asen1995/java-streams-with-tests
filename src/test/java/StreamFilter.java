@@ -19,11 +19,11 @@ public class StreamFilter {
     @Test
     public void streamFilterByCriteriaMinNumber() {
 
-        List<Object> objects = Arrays.asList(5, 2, 7, 10, 600, "asen", "peter", 660, 44);
+        final List<Object> objects = Arrays.asList(5, 2, 7, 10, 600, "asen", "peter", 660, 44);
 
-        Integer minNumber = 10;
+        final Integer minNumber = 10;
 
-        List<Object> data = objects.stream()
+        final List<Object> data = objects.stream()
                 .filter(object -> object instanceof Integer)
                 .filter(number -> (Integer) number > minNumber).sorted()
                 .collect(Collectors.toList());

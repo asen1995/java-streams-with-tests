@@ -20,9 +20,9 @@ public class StreamMaps {
     @Test
     public void mapEveryStringFromStreamAndInvokeUpperCase() {
 
-        List<String> upperCaseInit = Arrays.asList("A", "B", "C");
+        final List<String> upperCaseInit = Arrays.asList("A", "B", "C");
 
-        List<String> upperCaseListAfterMap = Stream.of("a", "b", "c")
+        final List<String> upperCaseListAfterMap = Stream.of("a", "b", "c")
                 .map(String::toUpperCase).collect(Collectors.toList());
         assertNotNull(upperCaseListAfterMap);
 
