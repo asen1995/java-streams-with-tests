@@ -1,0 +1,12 @@
+.settings
+target
+.project
+.classpath
+.springBeans
+
+.classes-ext
+.idea
+.aux
+**/*.iml
+
+lib/
