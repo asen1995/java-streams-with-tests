@@ -15,9 +15,9 @@ public final class StreamFilter {
         //setup
     }
 
-    @DisplayName("streamFilterByCriteriaMinNumber")
+    @DisplayName("streamFilterByCriteriaBiggerThenMinNumber")
     @Test
-    public void streamFilterByCriteriaMinNumber() {
+    public void streamFilterByCriteriaBiggerThenMinNumber() {
 
         final List<Object> objects = Arrays.asList(5, 2, 7, 10, 600, "asen", "peter", 660, 44);
 
