@@ -4,9 +4,13 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.stream.Stream;
+
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
+
 public final class StreamFilter {
 
 
@@ -53,5 +57,19 @@ public final class StreamFilter {
         assertTrue(data.size() == 2);
     }
 
+    @DisplayName("streamFilterByCriteriaBiggerFindMinNumber")
+    @Test
+    public void streamFilterByCriteriaBiggerFindMinNumber() {
 
+        final List<Object> objects = Arrays.asList(5, 2, 7, 10, 600, "asen", "peter", 660, 44);
+
+        Optional<Integer> minNumber = objects.stream()
+                .filter(obj -> obj instanceof Integer)
+                .map(obj -> (Integer) obj)
+                .sorted()
+                .findFirst();
+
+        assertTrue(minNumber.isPresent() && minNumber.get() == 2);
+
+    }
 }
