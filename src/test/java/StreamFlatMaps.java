@@ -16,9 +16,9 @@ public class StreamFlatMaps {
         //setup
     }
 
-    @DisplayName("flatMapUnitTest")
+    @DisplayName("flatMapUnitTestThatMergesThreeListsIntoOne")
     @Test
-    public void flatMapUnitTest() {
+    public void flatMapUnitTestThatMergesThreeListsIntoOne() {
 
         final List<String> letters1 = Arrays.asList("a", "b");
         final List<String> letters2 = Arrays.asList("b", "c", "d");
