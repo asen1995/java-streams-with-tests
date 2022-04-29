@@ -55,4 +55,19 @@ public class StreamsBasics {
 
         assertTrue(uniqueThreads.size() == 1);
     }
+
+
+    @DisplayName("parallelStreamsUseMoreThenOneThread")
+    @Test
+    void parallelStreamsUseMoreThenOneThread() {
+        final List<Integer> listOfNumbers = Arrays.asList(1, 2, 3, 4);
+
+        final Set<String> uniqueThreads = new HashSet<>();
+
+        listOfNumbers.parallelStream().forEach(number ->
+                uniqueThreads.add(Thread.currentThread().getName())
+        );
+
+        assertTrue(uniqueThreads.size() != 1);
+    }
 }
