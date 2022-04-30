@@ -15,7 +15,7 @@ public class StreamsBasics {
 
     @BeforeAll
     static void setup() {
-      //setup
+        //setup
     }
 
     @DisplayName("stream")
@@ -40,7 +40,6 @@ public class StreamsBasics {
             assertTrue(!e.isEmpty());
         });
     }
-
 
 
     @DisplayName("sequentialStreamUseSameThreadTest")
