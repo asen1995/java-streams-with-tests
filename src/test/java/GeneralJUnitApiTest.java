@@ -4,11 +4,13 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertSame;
+
 public class GeneralJUnitApiTest {
 
-    @DisplayName("assertSame")
+    @DisplayName("assertSameTest")
     @Test
-    public void assertSame() {
+    public void assertSameTest() {
         final List<Object> objects = Arrays.asList(5, 2, 7, 10, 600, "asen", "peter", 660, 44);
         final List<Object> objectSecondPointer = objects;
 
