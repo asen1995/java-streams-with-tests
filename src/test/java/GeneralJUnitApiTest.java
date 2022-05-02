@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -8,6 +9,10 @@ import static org.junit.jupiter.api.Assertions.assertSame;
 
 public class GeneralJUnitApiTest {
 
+    @BeforeAll
+    static void setup() {
+        //setup
+    }
     @DisplayName("assertSameTest")
     @Test
     public void assertSameTest() {
